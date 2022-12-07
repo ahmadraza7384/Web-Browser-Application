@@ -9,7 +9,7 @@ class MainScreen(QMainWindow):
     def __init__(self):
         super(MainScreen,self).__init__()
         self.Browser = QWebEngineView()
-        self.Browser.setUrl(QUrl('https://www.flipkart.com/'))
+        self.Browser.setUrl(QUrl('https://www.google.com/'))
         self.setCentralWidget(self.Browser)
         self.showMaximized()
         NavBar=QToolBar()
@@ -38,11 +38,11 @@ class MainScreen(QMainWindow):
         self.Browser.urlChanged.connect(self.UpdateUrl)
 
     def NavigateHome(self):
-        self.Browser.setUrl("https://www.flipkart.com/")
+        self.Browser.setUrl("https://www.google.com/")
 
     def NavigateToUrl(self):
         Url = self.UrlBar.text()
-        self.Browser.setUrl(QUrl('https://www.flipkart.com/'))
+        self.Browser.setUrl(QUrl('https://www.google.com/'))
         
     def UpdateUrl(self,p):
         self.UrlBar.setText(str(p))
